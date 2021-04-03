@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="icon" href="image/student.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register (Student) - Ride-Hailing System</title>
+  <meta charset="utf-8">
+
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font: 400 15px/1.8 "Lato", sans-serif;
+      color: #777;
+      background-color: #f5f5f5;
+    }
+
+    #submit-button {
+      display: block;
+      width: 100%;
+      color: #fff;
+      font-size: 14px;
+      margin: 0;
+      padding: 14px 13px 12px 13px;
+      border: 0;
+      background-color: green;
+      border-radius: 25px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    #submit-button-cvr {
+      margin-top: 20px;
+    }
+
+    #cover {
+      width: 722px;
+      height: 522px;
+      padding: 45px;
+      margin: 0 auto;
+    }
+
+    #form-ui,
+    form,
+    #close-form {
+      position: relative;
+    }
+
+    form {
+      width: 262px;
+      height: 620px;
+      padding: 25px;
+      background-color: #fff;
+      border-radius: 20px;
+    }
+
+    #close-form {
+      position: absolute;
+      top: 23px;
+      right: 25px;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    #close-form:before,
+    #close-form:after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 10px;
+      width: 5px;
+      height: 28px;
+      background-color: rgba(0, 0, 0, 0.06);
+      border-radius: 10px;
+    }
+
+    #close-form:before {
+      transform: rotateZ(-45deg);
+    }
+
+    #close-form:after {
+      transform: rotateZ(45deg);
+    }
+
+    #form-body {
+      position: absolute;
+      top: 45%;
+      right: 25px;
+      left: 25px;
+      width: 230px;
+      margin: -240px auto 0 auto;
+    }
+
+    #welcome-lines {
+      text-align: center;
+      line-height: 1;
+    }
+
+    #w-line-1 {
+      color: #7f7f7f;
+      font-size: 40px;
+    }
+
+    #w-line-2 {
+      color: #9c9c9c;
+      font-size: 28px;
+      margin-top: 17px;
+    }
+
+    #input-area {
+      margin-top: 40px;
+    }
+
+    .f-inp {
+      padding: 11px 25px;
+      border: 1px solid #e3e3e3;
+      line-height: 1;
+      border-radius: 20px;
+    }
+
+    .f-inp input {
+      width: 100%;
+      font-size: 13.4px;
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
+
+    .f-inp input::placeholder {
+      color: #b9b9b9;
+    }
+
+    #img-box {
+      position: absolute;
+      top: 51%;
+      left: 312px;
+      width: 504px;
+      height: 484px;
+      margin-top: -247.5px;
+      padding-right: 16px;
+      background-color: #f5f5f5;
+      border-radius: 0 20px 20px 0;
+      overflow: hidden;
+      display: block;
+    }
+
+    #switch {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+    <header>
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top scrolling-navbar">
+
+          <div class="container">
+
+              <!-- Navbar brand -->
+              <a class="navbar-brand">UiTM</a>
+
+              <!-- Collapse button -->
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <!-- Collapsible content -->
+              <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                  <!-- Links -->
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Student Register</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="stud_login.html">Student Login</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="driv_login.html">Driver Login</a>
+                      </li>
+                  </ul>
+                  <!-- Links -->
+
+                  <!-- Social Icon  -->
+                  <ul class="navbar-nav nav-flex-icons">
+                      <li class="nav-item">
+                          <a class="nav-link"><i class="fab fa-facebook"></i></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link"><i class="fab fa-twitter"></i></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link"><i class="fab fa-instagram"></i></a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- Collapsible content -->
+
+          </div>
+
+      </nav>
+      <!--/.Navbar-->
+    </header>
+    <br /><br />
+  <div id="cover">
+    <div id="form-ui">
+      <form method="post" action="stud_register.php">
+        <center><b>UiTM SEGAMAT STUDENTS</b></center>
+        <div id="form-body">
+          <div id="welcome-lines">
+            <div id="w-line-2">Register here.</div>
+          </div>
+          <input type="hidden" name="txtid" value="0" />
+          <div id="input-area">
+            <div class="f-inp">
+              <input type="text" placeholder="Name" name="name">
+            </div>
+            <br>
+            <div class="f-inp">
+              <input type="text" placeholder="Matrix Number" name="matrix">
+            </div>
+            <br>
+            <div class="f-inp">
+              <input type="text" placeholder="IC Number" name="IC">
+            </div>
+            <br>
+            <div class="f-inp">
+              <input type="password" placeholder="Password" name="password">
+            </div>
+            <br>
+            <div class="f-inp">
+              <input type="text" placeholder="Phone Number" name="phone">
+            </div>
+            <br>
+            <div class="f-inp">
+              <input type="text" placeholder="College Name" name="college">
+            </div>
+          </div>
+          <div id="submit-button-cvr">
+            <button type="submit" value="register" name="btnsave" id="submit-button">REGISTER</button>
+          </div>
+          <div id="switch">
+            <a href="stud_login.html">Already a user? Login here</a>
+          </div>
+        </div>
+      </form>
+      <div id="img-box">
+        <img src="image/filloutform.png" alt="UI Image" style="max-width: 100%">
+      </div>
+    </div>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

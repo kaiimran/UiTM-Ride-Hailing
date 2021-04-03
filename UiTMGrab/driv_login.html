@@ -1,0 +1,90 @@
+<!-- driver login -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+  </head>
+  <body>
+      <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top scrolling-navbar">
+
+            <div class="container">
+
+                <!-- Navbar brand -->
+                <a class="navbar-brand">UiTM</a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stud_register.html">Student Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stud_login.html">Student Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Driver Login</a>
+                        </li>
+                    </ul>
+                    <!-- Links -->
+
+                    <!-- Social Icon  -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Collapsible content -->
+
+            </div>
+
+        </nav>
+        <!--/.Navbar-->
+      </header>
+    <form method="POST" action="driv_login.php" class="form-signin">
+      <img class="mb-4" src="image/driver.png" alt="logodriver" style="max-width:250px">
+      <h1 class="h3 mb-3 font-weight-normal text-center">DRIVER LOGIN</h1>
+      <label for="inputEmail" class="sr-only">Driver Email</label>
+      <input type="email" id="inputEmail" name="d_email" class="form-control" placeholder="Email address" required autofocus>
+
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" name="d_pass" class="form-control" placeholder="Password" required>
+      <div class="checkbox mb-3 text-center">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-success btn-block" type="submit" value ="Login" name ="submit">Log in</button>
+      <div class="switch-login-register">
+        Switch to <a href="stud_login.html">Student Login</a>
+        <br><br>
+        <a>- UiTM Ride-Hailing System 2019 -</a>
+      </div>
+    </form>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+</html>
